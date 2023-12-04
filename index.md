@@ -4,7 +4,7 @@
 
 layout: home
 ---
-##### Getting Portfolio together, still under construction but sope parts work  
+##### Getting Portfolio together, still under construction.  
   
   
 Some recent projects to learn/practice:  
