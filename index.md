@@ -4,6 +4,9 @@
 
 layout: home
 ---
-##### PLACEHOLDER
+##### Getting Portfolio together, still under construction but sope parts work  
+  
+  
+Some recent projects to learn/practice:  
 
-[Link to demo app: MPN Lookup using React JS](https://jonathan-gartland.github.io/practice-pages)
+[MPN Lookup using React JS](https://jonathan-gartland.github.io/practice-pages)
