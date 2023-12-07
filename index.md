@@ -13,7 +13,7 @@ Running currently:
 [MPN Lookup using React JS](https://jonathan-gartland.github.io/practice-pages) and link to [Project Code](https://github.com/jonathan-gartland/practice-pages)  
   
   
-Projects related to implementing test framework solutions
+Projects related to implementing test framework solutions  
 [NextJS project implemented with Jest & Playwright Testing](https://github.com/jonathan-gartland/NextAppJS/tree/add-playwright)  
 
 [NextJs project Implemented with Cypress]()
