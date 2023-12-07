@@ -13,19 +13,20 @@ Running currently:
 [MPN Lookup using React JS](https://jonathan-gartland.github.io/practice-pages) and link to [Project Code](https://github.com/jonathan-gartland/practice-pages)  
   
   
-Projects related to implementing test framework solutions  
-[NextJS project implemented with Jest & Playwright Testing](https://github.com/jonathan-gartland/NextAppJS/tree/add-playwright)  
+Projects related to implementing test framework solutions:  
+  
+NextJS starter Example with:  
+[Jest & Playwright Testing](https://github.com/jonathan-gartland/NextAppJS/tree/add-playwright)  
+[Cypress]()  
+[WebdriverIO]()  
 
-[NextJs project Implemented with Cypress]()
+React Native Starter Example with:
+[Appium Tests via WebdriverIO]()
 
-[NextJs project Implemented with WebdriverIO]()
-
-[React Native Boilerplate implemented with Appium Tests via WebdriverIO]()
-
-[React Native Boilerplate implemented with Detox]()  
+[Detox]()  
   
 API Testing
 
-[Using Supertest, Mocha, Chai](https://github.com/jonathan-gartland/ApiTestFrameworkMocha)
+[Supertest, Mocha, Chai](https://github.com/jonathan-gartland/ApiTestFrameworkMocha)
 
-[Using Supertest, Jest]()
+[Supertest, Jest]()
