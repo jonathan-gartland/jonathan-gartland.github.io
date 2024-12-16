@@ -4,4 +4,7 @@ title: About
 permalink: /about/
 ---
 
+## Placeholders  
+#### for about
+
 
