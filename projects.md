@@ -36,12 +36,12 @@ The interesting tests in this project from my perspective are the tests for the 
 
 
 
-### :rocket: [Playwright example: Data Driven Testing](https://github.com/jonathan-gartland/playwright-demo-jg)
+### :rocket: [Playwright example: LoopQA Assessment - Data Driven Testing](https://github.com/jonathan-gartland/playwright-demo-jg)
 
-This was a technical assessment assignment for an interview. Given a set of detail to validate against a trello like app - which lacked any useful identifiers or test id's fwiw. Tradeoffs were made in implementing as I time boxed it to 14 hours total so it could be easily optimized with some thoughtful refactoring. 
+This was a technical assessment assignment for an interview. Given a set of detail to validate against a trello like app - which lacked any useful identifiers or test id's fwiw. Tradeoffs were made in implementing as I time boxed it to 4 hours total so it could be easily optimized with some thoughtful refactoring. 
 
 ### :rocket: [Playwright example: QA Wolf Take Home](https://github.com/jonathan-gartland/qa_wolf_take_home)  
-Simple solution to a simple task. I did add some linting and CI/CD so I guess I did do extra, but its project value add extra not overengineered solution extra so take it for what it is.  
+Simple solution to a simple task. I did add some linting and CI/CD so I guess I did do extra, but its 'project value add extra' not 'over-engineered solution extra' so take it for what it is.  
   
 
 API Testing
