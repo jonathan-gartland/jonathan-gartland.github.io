@@ -59,7 +59,7 @@ be easily expanded upon.
 Random 'Take Home' projects from sketchy 'QA as a service' companies that are cheapening the value of QA work.
 
 [LoopQA Assessment - Data Driven Testing](https://github.com/jonathan-gartland/playwright-demo-jg) <span
-style="padding-left: 50px;">![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=fff&style=for-the-badge)</span>  
+style="padding-left: 50px;">![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=fff&style=for-the-badge)</span>  [![Playwright Tests](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml)  
 
 This was a technical assessment assignment for an interview. Given a set of detail to validate against a trello like app - which lacked any useful identifiers or test id's fwiw. Tradeoffs were made in implementing as I time boxed it to 4 hours total so it could be easily optimized with some thoughtful refactoring. 
 
