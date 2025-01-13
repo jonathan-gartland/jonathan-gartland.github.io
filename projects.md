@@ -32,6 +32,7 @@ using this practice project.
 
 ## [MPN Lookup Flutter](https://github.com/jonathan-gartland/mpn_lookup_flutter) <span style="padding-left: 50px;"> ![Flutter](https://img.shields.io/badge/flutter-%2320232a.svg?style=for-the-badge&logo=flutter&logoColor=%2361DAFB)</span>
 [![Flutter](https://github.com/jonathan-gartland/mpn_lookup_flutter/actions/workflows/setup-flutter.yml/badge.svg)](https://github.com/jonathan-gartland/mpn_lookup_flutter/actions/workflows/setup-flutter.yml)   
+[![Flutter CI](https://github.com/jonathan-gartland/flutterGithubActions/actions/workflows/main.yml/badge.svg?branch=development)](https://github.com/jonathan-gartland/flutterGithubActions/actions/workflows/main.yml)  
   
 The app above refactored into a native app project. I am implementing tests using tools like Maestro and Appium
 using this practice project.
