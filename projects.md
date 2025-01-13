@@ -5,8 +5,7 @@ permalink: /projects/
 ---
 
 ## [MPN Lookup](https://jonathan-gartland.github.io/mpn-lookup-nextjs) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span>
-[![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.
-com/jonathan-gartland/mpn-lookup-nextjs)
+[![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/mpn-lookup-nextjs)
 
 [![Playwright Tests](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml/badge.svg?branch=development)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml)
 [![Node.js CI](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml) [![Deploy](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml)  
@@ -32,7 +31,7 @@ using this practice project.
 
 ## [MPN Lookup Flutter](https://github.com/jonathan-gartland/mpn_lookup_flutter) <span style="padding-left: 50px;"> ![Flutter](https://img.shields.io/badge/flutter-%2320232a.svg?style=for-the-badge&logo=flutter&logoColor=%2361DAFB)</span>
 [![Flutter](https://github.com/jonathan-gartland/mpn_lookup_flutter/actions/workflows/setup-flutter.yml/badge.svg)](https://github.com/jonathan-gartland/mpn_lookup_flutter/actions/workflows/setup-flutter.yml)   
-[![Flutter CI](https://github.com/jonathan-gartland/flutterGithubActions/actions/workflows/main.yml/badge.svg?branch=development)](https://github.com/jonathan-gartland/flutterGithubActions/actions/workflows/main.yml)  
+
   
 The app above refactored into a native app project. I am implementing tests using tools like Maestro and Appium
 using this practice project.
