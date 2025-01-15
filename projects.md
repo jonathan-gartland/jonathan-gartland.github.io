@@ -4,10 +4,11 @@ title: Projects
 permalink: /projects/
 ---
 
-## [MPN Lookup](https://jonathan-gartland.github.io/mpn-lookup-nextjs) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span>
+## [MPN Lookup](https://jonathan-gartland.github.io/mpn-lookup-nextjs) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
 [![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/mpn-lookup-nextjs)
 
-[![Playwright Tests](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml/badge.svg?branch=development)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml)
+[![Playwright Tests](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml/badge.svg?branch=development)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml) 
+[![Deploy](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml) 
 [![Node.js CI](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml) [![Deploy](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml)  
  
   
@@ -20,7 +21,7 @@ The component tests include a test for the Home view, validating that clicking t
 
 ---  
   
-## [MPN Lookup Native App](https://github.com/jonathan-gartland/MpnLookupRN) <span style="padding-left: 50px;"> ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)</span>  
+## [MPN Lookup Native App](https://github.com/jonathan-gartland/MpnLookupRN) <span style="padding-left: 50px;"> ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
 [![Tests (jest)](https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml/badge.svg?
 branch=development)](https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml)  
   
@@ -38,7 +39,7 @@ using this practice project.
   
 ---
   
-# [Jonny's Bikes](https://jonathan-gartland.github.io/jonnys-bikes) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![Apache ECharts Badge](https://img.shields.io/badge/Apache%20ECharts-AA344D?logo=apacheecharts&logoColor=fff&style=for-the-badge)
+# [Jonny's Bikes](https://jonathan-gartland.github.io/jonnys-bikes) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![Apache ECharts Badge](https://img.shields.io/badge/Apache%20ECharts-AA344D?logo=apacheecharts&logoColor=fff&style=for-the-badge) ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
 [![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/jonnys-bikes)  
 [![Playwright Tests](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/playwright.yml) [![Deploy](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/deploy.yml)  
 
@@ -49,23 +50,27 @@ The interesting tests in this project from my perspective are the tests for the 
 
 ---
   
-## [ApiTestFrameworkMocha](https://github.com/jonathan-gartland/ApiTestFrameworkMocha) <span style="padding-left:50px;">![Mocha](https://img.shields.io/badge/-Mocha-%238D6748?&style=for-the-badge&logo=Mocha&logoColor=white)</span> ![Chai](https://img.shields.io/badge/chai.js-323330?style=for-the-badge&logo=chai&logoColor=red)
-[![API tests demo](https://github.com/jonathan-gartland/ApiTestFrameworkMocha/actions/workflows/main.yml/badge.svg)](https://github.com/jonathan-gartland/ApiTestFrameworkMocha/actions/workflows/main.yml)
+## [ApiTestFrameworkMocha](https://github.com/jonathan-gartland/ApiTestFrameworkMocha) <span style="padding-left:50px;">![Mocha](https://img.shields.io/badge/-Mocha-%238D6748?&style=for-the-badge&logo=Mocha&logoColor=white)</span> ![Chai](https://img.shields.io/badge/chai.js-323330?style=for-the-badge&logo=chai&logoColor=red) ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)
   
+[![API tests demo](https://github.com/jonathan-gartland/ApiTestFrameworkMocha/actions/workflows/main.yml/badge.svg)](https://github.com/jonathan-gartland/ApiTestFrameworkMocha/actions/workflows/main.yml)  
+
 Demonstration of API testing using Mocha, Chai, and TypeScript. The tests are simple, but the framework is set up to 
 be easily expanded upon.  
   
-## Errata  
-Random 'Take Home' projects from sketchy 'QA as a service' companies that are cheapening the value of QA work.
+---  
+  
+## Errata & miscellaneous 'take home' projects  
+Random 'Take Home' projects from sketchy 'QA as a service' companies that are cheapening the value of QA work and 
+other examples I've stubbed out for practice.
 
 [LoopQA Assessment - Data Driven Testing](https://github.com/jonathan-gartland/playwright-demo-jg) <span
-style="padding-left: 50px;">![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=fff&style=for-the-badge)</span>   
+style="padding-left: 50px;">![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=fff&style=for-the-badge)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
 [![Playwright Tests](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml)  
 
 This was a technical assessment assignment for an interview. Given a set of detail to validate against a trello like app - which lacked any useful identifiers or test id's fwiw. Tradeoffs were made in implementing as I time boxed it to 4 hours total so it could be easily optimized with some thoughtful refactoring. 
 
 [Playwright example: QA Wolf Take Home](https://github.com/jonathan-gartland/qa_wolf_take_home) <span
-style="padding-left: 50px;">![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=fff&style=for-the-badge)</span>  
+style="padding-left: 50px;">![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=fff&style=for-the-badge)</span>  ![JavaScript](https://img.shields.io/badge/-JavaScript-f0db4f?&style=for-the-badge&logo=JavaScript&logoColor=black)
 [![Playwright Tests](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml)
 
 Simple solution to a simple task. I did add some linting and CI/CD so I guess I did do extra, but its 'project value add extra' not 'over-engineered solution extra' so take it for what it is.  

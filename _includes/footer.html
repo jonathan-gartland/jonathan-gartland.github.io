@@ -5,11 +5,16 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
+        <p class="contact-info">
+          <a class="u-linkedin" href="https://www.linkedin.com/in/jonathan-gartland-01b7ba16/"><svg class="svg-icon">
+            <use xlink:href="{{ 'assets/minima-social-icons.svg#linkedin' | relative_url }}"></use>
+          </svg><span>LinkedIn</span>
+          </a>
+          <br />
+          <a class="u-github" href="https://github.com/jonathan-gartland" target="_blank">
+            <svg class="svg-icon">
+              <use xlink:href="{{ 'assets/minima-social-icons.svg#github' | relative_url }}"></use>
+            </svg><span>GitHub</span>
           </a>
         </p>
       {%- if site.author %}
