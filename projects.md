@@ -39,8 +39,8 @@ The component tests include a test for the Home view, validating that clicking t
 [![Flutter CI](https://github.com/jonathan-gartland/mpn_lookup_flutter/actions/workflows/main.yml/badge.svg)](https://github.com/jonathan-gartland/mpn_lookup_flutter/actions/workflows/main.yml)     
 
   
-The app above refactored into a native app project. I am implementing tests using tools like Maestro and Appium
-using this practice project.
+The app above refactored into a flutter app. Used to get some practice testing Flutter apps. Additional UI tests 
+using Appium are in the works.  
   
 ---
   
