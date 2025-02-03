@@ -21,19 +21,15 @@ The component tests include a test for the Home view, validating that clicking t
 
 ---  
   
-[//]: # (## [MPN Lookup Native App]&#40;https://github.com/jonathan-gartland/MpnLookupRN&#41; <span style="padding-left: 50px;"> ![React Native]&#40;https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB&#41;</span> ![TypeScript]&#40;https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black&#41;  )
+## [MPN Lookup Native App](https://github.com/jonathan-gartland/MpnLookupRN) <span style="padding-left: 50px;"> ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
 
-[//]: # ([![Tests &#40;jest&#41;]&#40;https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml/badge.svg?)
+[//]: # ([![Tests &#40;jest&#41;]&#40;https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml/badge.svg?branch=development&#41;]&#40;https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml&#41;  )
 
-[//]: # (branch=development&#41;]&#40;https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml&#41;  )
+  
+The app above refactored into a native app project. I am implementing tests using tools like Maestro and Appium using this practice project.  
 
-[//]: # (  )
-[//]: # (The app above refactored into a native app project. I am implementing tests using tools like Maestro and Appium )
-
-[//]: # (using this practice project.  )
-
-[//]: # (  )
-[//]: # (---  )
+  
+---  
 
 ## [MPN Lookup Flutter](https://github.com/jonathan-gartland/mpn_lookup_flutter) <span style="padding-left: 50px;"> ![Flutter](https://img.shields.io/badge/flutter-%2320232a.svg?style=for-the-badge&logo=flutter&logoColor=%2361DAFB)</span>
 [![Flutter CI](https://github.com/jonathan-gartland/mpn_lookup_flutter/actions/workflows/main.yml/badge.svg)](https://github.com/jonathan-gartland/mpn_lookup_flutter/actions/workflows/main.yml)     
@@ -64,7 +60,7 @@ be easily expanded upon.
   
 ---  
 
-## [Pytest validation of Snowflake database loading](https://github.com/jonathan-gartland/data_validation_test) ![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?&style=for-the-badge&logo=snowflake&logoColor=white)  
+## [Pytest validation of Snowflake database loading](https://github.com/jonathan-gartland/data_validation_test) ![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?&style=for-the-badge&logo=snowflake&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest)
 I've been doing data validation work for a long time and I wanted to try some of the newer tools on the market.  
 This simple example copies the tables from the PostgreSQL sample database dvdrental to a Snowflake instance, hosted on AWS in my case. These tests are just some simple validation used to check that the data was copied correctly.  
   
