@@ -63,8 +63,16 @@ Demonstration of API testing using Mocha, Chai, and TypeScript. The tests are si
 be easily expanded upon.  
   
 ---  
+
+## [Pytest validation of Snowflake database loading](https://github.com/jonathan-gartland/data_validation_test) ![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?&style=for-the-badge&logo=snowflake&logoColor=white)  
+I've been doing data validation work for a long time and I wanted to try some of the newer tools on the market.  
+This simple example copies the tables from the PostgreSQL sample database dvdrental to a Snowflake instance, hosted on AWS in my case. These tests are just some simple validation used to check that the data was copied correctly.  
   
+---  
+
+
 ## Errata & miscellaneous 'take home' projects  
+
 Random 'Take Home' projects from sketchy 'QA as a service' companies that are cheapening the value of QA work and 
 other examples I've stubbed out for practice.
 
