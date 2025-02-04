@@ -23,8 +23,7 @@ The component tests include a test for the Home view, validating that clicking t
   
 ## [MPN Lookup Native App](https://github.com/jonathan-gartland/MpnLookupRN) <span style="padding-left: 50px;"> ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
 
-[//]: # ([![Tests &#40;jest&#41;]&#40;https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml/badge.svg?branch=development&#41;]&#40;https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml&#41;  )
-
+[![Tests (jest)](https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml/badge.svg?branch=development)](https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml)
   
 The app above refactored into a native app project. I am implementing tests using tools like Maestro and Appium using this practice project.  
 
