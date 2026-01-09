@@ -42,6 +42,31 @@ style=for-the-badge&logo=graphql&logoColor=white) ![OpenAPI](https://img.shields
 
 ## PROFESSIONAL EXPERIENCE
 
+### LHH Recruitment Solutions - Remote (Contract)  
+**SDET**  
+*Mar 2025 - Dec 2025*
+
+**Project Improvements**
+- Increased test coverage from ~0% to ~75% for port operations with 145+ test cases across 4 major test suites (ocean operations, container stuffing, container details, capacity planning).
+- Reduced flaky test rate from ~15% to <2% and improved bug detection to 80% caught before production (up from ~50%).
+- Developed custom drag-and-drop helper system for Angular CDK, solving complex mouse event simulation challenges to enable testing of critical container stuffing workflows.
+- Implemented Page Object Model, Factory Pattern, and reusable test components (TableSectionFactory, LoadPlanSearchHelper) reducing test development time by 50% and maintenance time by 60%.
+- Built enhanced API integration layer with retry logic, configurable timeouts, and detailed logging for improved test reliability.
+
+**Pipeline Management**
+- Created 10+ specialized CI/CD pipelines (regression, smoke, E2E) across DEV, TST, and ACC environments with scheduled daily execution and on-demand triggers.
+- Integrated Azure DevOps Test Plans using `@alex_neo/playwright-azure-reporter` with automated test result publishing, work item linking, and historical trend analysis.
+- Implemented comprehensive reporting strategy with HTML, JUnit XML, JSON, and Azure DevOps reporters including automatic screenshot, video, and trace file attachments.
+- Designed reusable pipelines with automated test data cleanup via SQL scripts.
+- Established scheduled regression runs with real-time pipeline visibility and immediate failure notifications.
+
+**Code Management**
+- Wrote 5,000+ lines of test code and 1,200+ lines of helper infrastructure following SOLID principles and design patterns.
+- Created 3 environment-specific Playwright configurations (base, CI, local) and 7 new NPM scripts for isolated test suite execution.
+- Implemented standardized test data management with seeding helpers featuring automatic GBL number generation, retry logic, and proper dependency ordering.
+- Organized codebase with clear separation of concerns: functional tests, page objects, helper functions, seeding utilities, and API integration layers.
+- Achieved 60% faster test maintenance and 40% faster debugging through centralized, reusable components and improved error messaging.
+
 ### Bath & Body Works – Remote (Contract)
 **Sr. Test Engineer, Testing Manager**  
 *Feb 2024 – Aug 2024*
