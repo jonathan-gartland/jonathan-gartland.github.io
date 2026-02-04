@@ -16,6 +16,27 @@ This is a personal portfolio website built with Jekyll and hosted on GitHub Page
   - jekyll-feed (RSS feed generation)
   - jemoji (emoji support)
 
+## GitHub Pages Context
+
+GitHub Pages publishes static content directly from a repository branch.
+
+### Supported Technologies
+- **Jekyll**: Built-in support for Jekyll static site generator (recommended for GitHub Pages)
+- **Static HTML/CSS/JS**: Plain static files work without any build system
+- **Custom GitHub Actions**: For other static site generators (Hugo, Eleventy, Next.js static export, etc.)
+
+### Configuration Options
+- **Publishing source**: Configure which branch/folder to publish from (typically `main` branch or `/docs` folder)
+- **Custom domains**: Can use custom domain instead of `username.github.io`
+- **HTTPS**: Enforced by default for security
+- **Custom 404 pages**: Create a `404.html` or `404.md` file
+
+### Key Files
+- `_config.yml`: Jekyll configuration (if using Jekyll)
+- `index.html` or `index.md`: Site entry point
+- `404.html`: Custom error page
+- `CNAME`: Custom domain configuration (if applicable)
+
 ## Development Commands
 
 ### Local Development
@@ -29,6 +50,8 @@ bundle exec jekyll serve
 # The site will be available at http://localhost:4000
 # Changes to most files are automatically recompiled (except _config.yml)
 ```
+
+For a plain static preview (no Jekyll build), you can use `npx serve` or `python -m http.server`.
 
 ### Important Notes
 - **Configuration changes:** After modifying `_config.yml`, you must restart the Jekyll server for changes to take effect
