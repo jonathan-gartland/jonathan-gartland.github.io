@@ -25,7 +25,9 @@ The component tests include a test for the Home view, validating that clicking t
 
 [![Tests (jest)](https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml/badge.svg?branch=development)](https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml)
   
-The app above refactored into a native app project. I am implementing tests using tools like Maestro and Appium using this practice project.  
+The MPN Lookup app refactored into a React Native project, used as the target application for a mobile test automation suite. The project includes a migration from Detox (the original E2E framework) to Appium, implemented in both Python (pytest + Appium Python Client) and TypeScript (WebdriverIO).
+
+The Python suite uses a page object model built on pytest fixtures, covering all three calculator screens (QuantiTray, QuantiTray2000, Legiolert) with data-driven assertions derived from the original Detox test cases. The TypeScript suite implements the same coverage using WebdriverIO with typed page objects. Both suites support Android and iOS via configurable Appium capabilities and are structured for CI integration.
 
   
 ---  
@@ -58,6 +60,16 @@ Demonstration of API testing using Mocha, Chai, and TypeScript. The tests are si
 be easily expanded upon.  
   
 ---  
+
+## [Consumer Driven Contract Testing with Pact](https://github.com/jonathan-gartland/example-consumer) <span style="padding-left: 50px;">![Pact](https://img.shields.io/badge/Pact-E4393C?style=for-the-badge)</span> ![JavaScript](https://img.shields.io/badge/-JavaScript-f0db4f?&style=for-the-badge&logo=JavaScript&logoColor=black)
+
+[![Build](https://github.com/jonathan-gartland/example-consumer/actions/workflows/build.yml/badge.svg)](https://github.com/jonathan-gartland/example-consumer/actions/workflows/build.yml)
+
+Consumer and provider implementations of contract testing using PactV3 and PactFlow. The [consumer](https://github.com/jonathan-gartland/example-consumer) defines interaction contracts — expected requests and responses — which are verified independently against the [provider](https://github.com/jonathan-gartland/example-provider) without requiring both services to be running simultaneously.
+
+This pattern is particularly valuable in microservices and API-driven architectures where provider changes can silently break consumers. The suite uses `given()` state setup, matcher-based response validation, and PactFlow for contract publication and verification in CI.
+
+---
 
 ## [Pytest validation of Snowflake database loading](https://github.com/jonathan-gartland/data_validation_test) ![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?&style=for-the-badge&logo=snowflake&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest)
 I've been doing data validation work for a long time and I wanted to try some of the newer tools on the market.  
