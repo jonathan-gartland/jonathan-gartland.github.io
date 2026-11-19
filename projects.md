@@ -11,18 +11,16 @@ permalink: /projects/
 [![CI](https://github.com/jonathan-gartland/mpn-lookup/actions/workflows/ci.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup/actions/workflows/ci.yml)
 [![npm downloads](https://img.shields.io/npm/dm/mpn-lookup.svg)](https://www.npmjs.com/package/mpn-lookup)
 
-A small, typed TypeScript library for Most Probable Number (MPN) lookups on IDEXX Quanti-Tray, Quanti-Tray/2000 and Legiolert water tests. You pass in positive well counts and get back the MPN and its 95% confidence interval, so you don't need the printed reference tables. It's the core of the MPN Lookup apps below.
+A small, typed TypeScript library for Most Probable Number (MPN) lookups on IDEXX Quanti-Tray, Quanti-Tray/2000 and Legiolert water tests. You pass in positive well counts and get back the MPN and its 95% confidence interval, so you don't need the printed reference tables. Both apps below are built on it.
 
-The tables are the critical part, so the project guards them:
+The lookup tables are the critical part, so the project guards them:
 
 - A checksum test hashes every lookup result and fails the build if any value changes. A separate CI job rejects any PR that touches the table data or that test.
 - Inputs are validated: an out-of-range or non-integer count returns `undefined` and never an unrelated table entry. The tables are frozen at runtime so callers can't corrupt them.
 - Releases build CJS and ESM bundles with type declarations. They're published from GitHub releases through npm trusted publishing (OIDC, no stored tokens) with provenance, and each version waits for 2FA approval before it goes live.
 - Dependabot keeps dependencies current, and a Claude Code agent in GitHub Actions fixes Dependabot PRs whose CI fails, under the same rules: it can't touch the table data, the checksum test or the workflows.
 
----
-
-## [MPN Lookup](https://jonathan-gartland.github.io/mpn-lookup-nextjs/) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
+### [MPN Lookup](https://jonathan-gartland.github.io/mpn-lookup-nextjs/) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-0E5A78?style=for-the-badge)](https://jonathan-gartland.github.io/mpn-lookup-nextjs/) [![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/mpn-lookup-nextjs)
 
 [![Playwright Tests](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml)
@@ -35,29 +33,17 @@ A mobile-sized web app built on the `mpn-lookup` library. Choose a test type, en
 - **End-to-end tests (Playwright):** run in Chromium, Firefox and WebKit, covering the menu flows, each calculator screen, and page metadata such as the favicon and link preview tags
 - **Data integrity:** a checksum test hashes every lookup the app displays, so a dependency update that changes a published MPN value fails CI
 
----  
-  
-## [MPN Lookup Native App](https://github.com/jonathan-gartland/MpnLookupRN) <span style="padding-left: 50px;"> ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
+### [MPN Lookup Native App](https://github.com/jonathan-gartland/MpnLookupRN) <span style="padding-left: 50px;"> ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
 
 [![Tests (jest)](https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml/badge.svg?branch=development)](https://github.com/jonathan-gartland/MpnLookupRN/actions/workflows/test.yml)
   
-The MPN Lookup app refactored into a React Native project, used as the target application for a mobile test automation suite. The project includes a migration from Detox (the original E2E framework) to Appium, implemented in both Python (pytest + Appium Python Client) and TypeScript (WebdriverIO).
+The web app above, rebuilt in React Native and used as the target application for a mobile test automation suite. The project includes a migration from Detox (the original E2E framework) to Appium, implemented in both Python (pytest + Appium Python Client) and TypeScript (WebdriverIO).
 
 The Python suite uses a page object model built on pytest fixtures, covering all three calculator screens (QuantiTray, QuantiTray2000, Legiolert) with data-driven assertions derived from the original Detox test cases. The TypeScript suite implements the same coverage using WebdriverIO with typed page objects. Both suites support Android and iOS via configurable Appium capabilities and are structured for CI integration.
 
-  
----  
-
-## [MPN Lookup Flutter](https://github.com/jonathan-gartland/mpn_lookup_flutter) <span style="padding-left: 50px;"> ![Flutter](https://img.shields.io/badge/flutter-%2320232a.svg?style=for-the-badge&logo=flutter&logoColor=%2361DAFB)</span>
-[![Flutter CI](https://github.com/jonathan-gartland/mpn_lookup_flutter/actions/workflows/main.yml/badge.svg)](https://github.com/jonathan-gartland/mpn_lookup_flutter/actions/workflows/main.yml)     
-
-  
-The app above refactored into a flutter app. Used to get some practice testing Flutter apps. Additional UI tests 
-using Appium are in the works.  
-  
 ---
-  
-# [Jonny's Bikes](https://jonathan-gartland.github.io/jonnys-bikes) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![Apache ECharts Badge](https://img.shields.io/badge/Apache%20ECharts-AA344D?logo=apacheecharts&logoColor=fff&style=for-the-badge) ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
+
+## [Jonny's Bikes](https://jonathan-gartland.github.io/jonnys-bikes) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![Apache ECharts Badge](https://img.shields.io/badge/Apache%20ECharts-AA344D?logo=apacheecharts&logoColor=fff&style=for-the-badge) ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
 [![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/jonnys-bikes)  
 [![Playwright Tests](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/playwright.yml) [![Deploy](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/deploy.yml)  
 
