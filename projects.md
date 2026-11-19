@@ -89,27 +89,4 @@ This pattern is particularly valuable in microservices and API-driven architectu
 
 ## [Pytest validation of Snowflake database loading](https://github.com/jonathan-gartland/data_validation_test) ![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?&style=for-the-badge&logo=snowflake&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest)
 I've been doing data validation work for a long time and I wanted to try some of the newer tools on the market.  
-This simple example copies the tables from the PostgreSQL sample database dvdrental to a Snowflake instance, hosted on AWS in my case. These tests are just some simple validation used to check that the data was copied correctly.  
-  
----  
-
-
-## Errata & miscellaneous 'take home' projects  
-
-Random 'Take Home' projects from sketchy 'QA as a service' companies that are cheapening the value of QA work and 
-other examples I've stubbed out for practice.
-
-[LoopQA Assessment - Data Driven Testing](https://github.com/jonathan-gartland/playwright-demo-jg) <span
-style="padding-left: 50px;">![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=fff&style=for-the-badge)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
-[![Playwright Tests](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml)  
-
-This was a technical assessment assignment for an interview. Given a set of detail to validate against a trello like app - which lacked any useful identifiers or test id's fwiw. Tradeoffs were made in implementing as I time boxed it to 4 hours total so it could be easily optimized with some thoughtful refactoring. 
-
-[Playwright example: QA Wolf Take Home](https://github.com/jonathan-gartland/qa_wolf_take_home) <span
-style="padding-left: 50px;">![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=fff&style=for-the-badge)</span>  ![JavaScript](https://img.shields.io/badge/-JavaScript-f0db4f?&style=for-the-badge&logo=JavaScript&logoColor=black)
-[![Playwright Tests](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml)
-
-Simple solution to a simple task. I did add some linting and CI/CD so I guess I did do extra, but its 'project value add extra' not 'over-engineered solution extra' so take it for what it is.  
-  
-
-
+This simple example copies the tables from the PostgreSQL sample database dvdrental to a Snowflake instance, hosted on AWS in my case. These tests are just some simple validation used to check that the data was copied correctly.
