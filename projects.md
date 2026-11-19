@@ -4,20 +4,36 @@ title: Projects
 permalink: /projects/
 ---
 
-## [MPN Lookup](https://jonathan-gartland.github.io/mpn-lookup-nextjs) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
-[![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/mpn-lookup-nextjs)
+## [mpn-lookup (npm library)](https://www.npmjs.com/package/mpn-lookup) <span style="padding-left: 50px;"> ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
+[![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/mpn-lookup)
 
-[![Playwright Tests](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml/badge.svg?branch=development)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml) 
-[![Deploy](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml) 
-[![Node.js CI](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml) [![Deploy](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml)  
- 
-  
+[![npm version](https://img.shields.io/npm/v/mpn-lookup.svg)](https://www.npmjs.com/package/mpn-lookup)
+[![CI](https://github.com/jonathan-gartland/mpn-lookup/actions/workflows/ci.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup/actions/workflows/ci.yml)
+[![npm downloads](https://img.shields.io/npm/dm/mpn-lookup.svg)](https://www.npmjs.com/package/mpn-lookup)
 
-This is a very simple app that looks like a wireframe for a phone app. The details are available in the README.md file in the project.  
-  
-I wrote this app to practice testing with React, so here I will simply discuss the testing.  
-  
-The component tests include a test for the Home view, validating that clicking the buttons brings the user to the correct screen. The LoginComponent test verifies the functionality of each screen with a few simple tests and actions. I added tests for the MPN object into this project as I am including it directly instead of using the library from the npm registry (where these tests would be part of the package, and not our concern here), so I added tests that validate the object for now, until I update the app to use the official library.  
+A small, typed TypeScript library for Most Probable Number (MPN) lookups on IDEXX Quanti-Tray, Quanti-Tray/2000 and Legiolert water tests. You pass in positive well counts and get back the MPN and its 95% confidence interval, so you don't need the printed reference tables. It's the core of the MPN Lookup apps below.
+
+The tables are the critical part, so the project guards them:
+
+- A checksum test hashes every lookup result and fails the build if any value changes. A separate CI job rejects any PR that touches the table data or that test.
+- Inputs are validated: an out-of-range or non-integer count returns `undefined` and never an unrelated table entry. The tables are frozen at runtime so callers can't corrupt them.
+- Releases build CJS and ESM bundles with type declarations. They're published from GitHub releases through npm trusted publishing (OIDC, no stored tokens) with provenance, and each version waits for 2FA approval before it goes live.
+- Dependabot keeps dependencies current, and a Claude Code agent in GitHub Actions fixes Dependabot PRs whose CI fails, under the same rules: it can't touch the table data, the checksum test or the workflows.
+
+---
+
+## [MPN Lookup](https://jonathan-gartland.github.io/mpn-lookup-nextjs/) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-0E5A78?style=for-the-badge)](https://jonathan-gartland.github.io/mpn-lookup-nextjs/) [![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/mpn-lookup-nextjs)
+
+[![Playwright Tests](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml)
+[![Node.js CI](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml)
+[![Deploy](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml)
+
+A mobile-sized web app built on the `mpn-lookup` library. Choose a test type, enter the positive well counts, and it shows the MPN with its 95% confidence interval. It's a static Next.js export deployed to GitHub Pages, and I built it to practice testing a React app at every layer:
+
+- **Component tests (Jest + React Testing Library):** the Home view's navigation, and the LookupComponent's input handling and results for each test type
+- **End-to-end tests (Playwright):** run in Chromium, Firefox and WebKit, covering the menu flows, each calculator screen, and page metadata such as the favicon and link preview tags
+- **Data integrity:** a checksum test hashes every lookup the app displays, so a dependency update that changes a published MPN value fails CI
 
 ---  
   
@@ -73,27 +89,4 @@ This pattern is particularly valuable in microservices and API-driven architectu
 
 ## [Pytest validation of Snowflake database loading](https://github.com/jonathan-gartland/data_validation_test) ![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?&style=for-the-badge&logo=snowflake&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest)
 I've been doing data validation work for a long time and I wanted to try some of the newer tools on the market.  
-This simple example copies the tables from the PostgreSQL sample database dvdrental to a Snowflake instance, hosted on AWS in my case. These tests are just some simple validation used to check that the data was copied correctly.  
-  
----  
-
-
-## Errata & miscellaneous 'take home' projects  
-
-Random 'Take Home' projects from sketchy 'QA as a service' companies that are cheapening the value of QA work and 
-other examples I've stubbed out for practice.
-
-[LoopQA Assessment - Data Driven Testing](https://github.com/jonathan-gartland/playwright-demo-jg) <span
-style="padding-left: 50px;">![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=fff&style=for-the-badge)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
-[![Playwright Tests](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml)  
-
-This was a technical assessment assignment for an interview. Given a set of detail to validate against a trello like app - which lacked any useful identifiers or test id's fwiw. Tradeoffs were made in implementing as I time boxed it to 4 hours total so it could be easily optimized with some thoughtful refactoring. 
-
-[Playwright example: QA Wolf Take Home](https://github.com/jonathan-gartland/qa_wolf_take_home) <span
-style="padding-left: 50px;">![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=fff&style=for-the-badge)</span>  ![JavaScript](https://img.shields.io/badge/-JavaScript-f0db4f?&style=for-the-badge&logo=JavaScript&logoColor=black)
-[![Playwright Tests](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/playwright-demo-jg/actions/workflows/playwright.yml)
-
-Simple solution to a simple task. I did add some linting and CI/CD so I guess I did do extra, but its 'project value add extra' not 'over-engineered solution extra' so take it for what it is.  
-  
-
-
+This simple example copies the tables from the PostgreSQL sample database dvdrental to a Snowflake instance, hosted on AWS in my case. These tests are just some simple validation used to check that the data was copied correctly.
