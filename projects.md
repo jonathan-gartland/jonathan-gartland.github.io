@@ -43,6 +43,22 @@ The Python suite uses a page object model built on pytest fixtures, covering all
 
 ---
 
+## [cypress-the-internet](https://github.com/jonathan-gartland/cypress-the-internet) <span style="padding-left: 50px;"> ![Cypress](https://img.shields.io/badge/-Cypress-%2317202C?&style=for-the-badge&logo=Cypress&logoColor=white)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)  
+[![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/cypress-the-internet)
+
+[![E2E](https://github.com/jonathan-gartland/cypress-the-internet/actions/workflows/e2e.yml/badge.svg)](https://github.com/jonathan-gartland/cypress-the-internet/actions/workflows/e2e.yml)
+
+An end-to-end suite in Cypress and TypeScript for Sauce Labs' [the-internet](https://github.com/saucelabs/the-internet), a collection of pages built to be hard to automate. Each spec takes one awkward case and shows how to test it reliably:
+
+- **Frames, shadow DOM and windows:** typing into TinyMCE's iframe, nested frames, shadow roots and slots, and `target="_blank"` links in a single-tab runner
+- **Timing without sleeps:** dynamic loading, slow and stubbed network responses with `cy.intercept`, and a lint rule that bans `cy.wait(ms)`
+- **Browser APIs:** alerts and prompts, geolocation stubbing, file upload and byte-for-byte download checks, HTML5 drag and drop, real CSS hover
+- **Accessibility:** axe-core checks where clean pages must stay clean and known violations are pinned by rule
+
+The app runs locally in Docker, built from a pinned commit, so the suite never depends on the public site. GitHub Actions runs it in Chrome and Firefox. Formatting is ESLint-only (`@antfu/eslint-config`, no Prettier), and Dependabot updates are handled by a Claude Code agent that runs the full suite before pushing a fix.
+
+---
+
 ## [Jonny's Bikes](https://jonathan-gartland.github.io/jonnys-bikes) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![Apache ECharts Badge](https://img.shields.io/badge/Apache%20ECharts-AA344D?logo=apacheecharts&logoColor=fff&style=for-the-badge) ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
 [![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/jonnys-bikes)  
 [![Playwright Tests](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/playwright.yml) [![Deploy](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/jonnys-bikes/actions/workflows/deploy.yml)  
