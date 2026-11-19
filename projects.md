@@ -4,20 +4,36 @@ title: Projects
 permalink: /projects/
 ---
 
-## [MPN Lookup](https://jonathan-gartland.github.io/mpn-lookup-nextjs) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
-[![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/mpn-lookup-nextjs)
+## [mpn-lookup (npm library)](https://www.npmjs.com/package/mpn-lookup) <span style="padding-left: 50px;"> ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
+[![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/mpn-lookup)
 
-[![Playwright Tests](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml/badge.svg?branch=development)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml) 
-[![Deploy](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml) 
-[![Node.js CI](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml) [![Deploy](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml)  
- 
-  
+[![npm version](https://img.shields.io/npm/v/mpn-lookup.svg)](https://www.npmjs.com/package/mpn-lookup)
+[![CI](https://github.com/jonathan-gartland/mpn-lookup/actions/workflows/ci.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup/actions/workflows/ci.yml)
+[![npm downloads](https://img.shields.io/npm/dm/mpn-lookup.svg)](https://www.npmjs.com/package/mpn-lookup)
 
-This is a very simple app that looks like a wireframe for a phone app. The details are available in the README.md file in the project.  
-  
-I wrote this app to practice testing with React, so here I will simply discuss the testing.  
-  
-The component tests include a test for the Home view, validating that clicking the buttons brings the user to the correct screen. The LoginComponent test verifies the functionality of each screen with a few simple tests and actions. I added tests for the MPN object into this project as I am including it directly instead of using the library from the npm registry (where these tests would be part of the package, and not our concern here), so I added tests that validate the object for now, until I update the app to use the official library.  
+A small, typed TypeScript library for Most Probable Number (MPN) lookups on IDEXX Quanti-Tray, Quanti-Tray/2000 and Legiolert water tests. You pass in positive well counts and get back the MPN and its 95% confidence interval, so you don't need the printed reference tables. It's the core of the MPN Lookup apps below.
+
+The tables are the critical part, so the project guards them:
+
+- A checksum test hashes every lookup result and fails the build if any value changes. A separate CI job rejects any PR that touches the table data or that test.
+- Inputs are validated: an out-of-range or non-integer count returns `undefined` and never an unrelated table entry. The tables are frozen at runtime so callers can't corrupt them.
+- Releases build CJS and ESM bundles with type declarations. They're published from GitHub releases through npm trusted publishing (OIDC, no stored tokens) with provenance, and each version waits for 2FA approval before it goes live.
+- Dependabot keeps dependencies current, and a Claude Code agent in GitHub Actions fixes Dependabot PRs whose CI fails, under the same rules: it can't touch the table data, the checksum test or the workflows.
+
+---
+
+## [MPN Lookup](https://jonathan-gartland.github.io/mpn-lookup-nextjs/) <span style="padding-left: 50px;"> ![NextJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)</span> ![TypeScript](https://img.shields.io/badge/-TypeScript-%233178C6?&style=for-the-badge&logo=Typescript&logoColor=black)  
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-0E5A78?style=for-the-badge)](https://jonathan-gartland.github.io/mpn-lookup-nextjs/) [![Project Code](https://img.shields.io/badge/Project%20Code-20B2AA?style=for-the-badge)](https://github.com/jonathan-gartland/mpn-lookup-nextjs)
+
+[![Playwright Tests](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/playwright.yml)
+[![Node.js CI](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/test.yml)
+[![Deploy](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml/badge.svg)](https://github.com/jonathan-gartland/mpn-lookup-nextjs/actions/workflows/deploy.yml)
+
+A mobile-sized web app built on the `mpn-lookup` library. Choose a test type, enter the positive well counts, and it shows the MPN with its 95% confidence interval. It's a static Next.js export deployed to GitHub Pages, and I built it to practice testing a React app at every layer:
+
+- **Component tests (Jest + React Testing Library):** the Home view's navigation, and the LookupComponent's input handling and results for each test type
+- **End-to-end tests (Playwright):** run in Chromium, Firefox and WebKit, covering the menu flows, each calculator screen, and page metadata such as the favicon and link preview tags
+- **Data integrity:** a checksum test hashes every lookup the app displays, so a dependency update that changes a published MPN value fails CI
 
 ---  
   
